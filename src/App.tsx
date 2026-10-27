@@ -100,6 +100,27 @@ const festivals: Festival[] = [
     category: 'सांस्कृतिक पर्व',
     description: 'किरात समुदायले प्रकृति र पुर्खाप्रति कृतज्ञता व्यक्त गर्दै साकेला नाच्ने पर्व।',
   },
+  {
+    date: '2026-05-01',
+    title: 'बुद्ध जयन्ती',
+    tradition: 'Buddhist',
+    category: 'पर्व',
+    description: 'गौतम बुद्धको जन्म, ज्ञान प्राप्ति र महापरिनिर्वाणको स्मरणमा मनाइने पर्व।',
+  },
+  {
+    date: '2026-03-20',
+    title: 'ईद उल-फित्र',
+    tradition: 'Muslim',
+    category: 'पर्व',
+    description: 'रमजान महिनाको उपवासपछि मनाइने पर्व। चन्द्रदर्शनअनुसार मिति फरक पर्न सक्छ।',
+  },
+  {
+    date: '2026-12-25',
+    title: 'क्रिसमस',
+    tradition: 'Christian',
+    category: 'पर्व',
+    description: 'येशू ख्रीष्टको जन्मको स्मरणमा मनाइने इसाई पर्व।',
+  },
 ]
 
 const weekdayNames = ['आइत', 'सोम', 'मङ्गल', 'बुध', 'बिही', 'शुक्र', 'शनि']
@@ -124,27 +145,6 @@ function App() {
 
   const calendarDays = useMemo(() => {
     const firstWeekday = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth(), 1).getDay()
-  {
-    date: '2026-05-01',
-    title: 'बुद्ध जयन्ती',
-    tradition: 'Buddhist',
-    category: 'पर्व',
-    description: 'गौतम बुद्धको जन्म, ज्ञान प्राप्ति र महापरिनिर्वाणको स्मरणमा मनाइने पर्व।',
-  },
-  {
-    date: '2026-03-20',
-    title: 'ईद उल-फित्र',
-    tradition: 'Muslim',
-    category: 'पर्व',
-    description: 'रमजान महिनाको उपवासपछि मनाइने पर्व। चन्द्रदर्शनअनुसार मिति फरक पर्न सक्छ।',
-  },
-  {
-    date: '2026-12-25',
-    title: 'क्रिसमस',
-    tradition: 'Christian',
-    category: 'पर्व',
-    description: 'येशू ख्रीष्टको जन्मको स्मरणमा मनाइने इसाई पर्व।',
-  },
     const daysInMonth = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() + 1, 0).getDate()
     const daysInPreviousMonth = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth(), 0).getDate()
     return Array.from({ length: 42 }, (_, index) => {
